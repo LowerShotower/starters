@@ -1,0 +1,85 @@
+{
+  "root": true,
+  "extends": [
+    "react-app",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": [
+    "babel",
+    "react",
+    "@typescript-eslint",
+    "jsx-a11y",
+    "no-loops",
+    "import",
+    "unused-imports"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "babel/no-unused-expressions": ["error", {"allowShortCircuit": true, "allowTernary": true}],
+    "babel/new-cap": "off",
+    "react/display-name": "off",
+    "consistent-return": "off",
+    "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "@typescript-eslint/no-unused-vars": "error",
+    "no-loops/no-loops": "error",
+    "import/no-unresolved": [2, {"commonjs": true, "amd": true}],
+    "import/namespace": 2,
+    "import/default": 2,
+    "import/export": 2,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-eval": ["error", {"allowIndirect": true}],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }],
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "no-shadow": "off",
+    "jsx-quotes": [
+      1,
+      "prefer-double"
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+        "**/*.test.jsx",
+        "**/*.test.tsx",
+        "**/*.spec.js",
+        "**/*.spec.jsx",
+        "**/*.spec.tsx"
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
