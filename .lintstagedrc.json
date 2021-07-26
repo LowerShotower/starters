@@ -2,5 +2,6 @@
   "src/**/*.{js,ts,jsx,tsx}": [
       "eslint --max-warnings=10 --fix",
       "git add"
-    ]
+    ],
+  "pre-push": "npm run test:noWatch"
 }
