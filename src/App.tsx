@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   const a = 1
-  useEffect(() =>    {
+  useEffect(() => {
     console.log(logo)
     console.log(a)
   }, [logo])
