@@ -1,6 +1,6 @@
 {
   "src/**/*.{js,ts,jsx,tsx}": [
-      "yarn eslint --max-warnings=10 --fix",
+      "eslint --max-warnings=10 --fix",
       "git add"
     ]
 }
